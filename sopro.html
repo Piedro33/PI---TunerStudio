@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sopro</title>
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Reset de margens e preenchimentos */
+        body {
+            font-family: Garamond, serif;
+            background-color: #5C3D2E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        /* Estilo do cabeçalho */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #361500;
+            padding: 3px 3px;
+            color: #fff;
+            position: relative;
+        }
+ 
+        /* Estilo do logotipo */
+        .logo img {
+            height: 50px; /* Tamanho do logotipo */
+        }
+ 
+        /* Estilo dos links do menu */
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+ 
+        .menu li {
+            margin: 0 20px;
+        }
+ 
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: left;
+        }
+
+ 
+        /* Ícones no menu (apenas para Favoritos, Carrinho e Login) */
+        .menu li.icon-only a {
+            font-size: 23px; /* Tamanho dos ícones */
+        }
+ 
+        /* Estilo da barra de pesquisa */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: 10%;
+            
+        }
+ 
+        .search-bar input[type="text"] {
+            padding: 3px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            width: 900px;
+        }
+ 
+        .search-bar button {
+            margin-left: 7px;
+            padding: 3px 3px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+ 
+        /* Toggle do menu para mobile */
+        .menu-toggle {
+            display: none; /* Esconde o ícone do menu em desktop */
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+ 
+        /* Esconde o checkbox que controla o menu mobile */
+        #menu-mobile {
+            display: none;
+        }
+ 
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            /* Ajuste para exibir o ícone do menu em mobile */
+            .menu-toggle {
+                display: block;
+            }
+ 
+            /* Esconde o menu padrão e barra de pesquisa em mobile */
+            .menu,
+            .search-bar {
+                display: none;
+            }
+ 
+            /* Exibe o menu em coluna ao ativar o menu mobile */
+            #menu-mobile:checked ~ nav .menu {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                padding: 10px 0;
+            }
+ 
+            .menu li {
+                margin: 10px 0;
+            }
+        }
+
+                .header {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+        }
+
+ /* Style the top navigation bar */
+        .topnav {
+        overflow: hidden;
+        background-color: #333;
+        }
+        
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: left;
+        padding: 10px 40px;
+        text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        /* Create three unequal columns that floats next to each other */
+        .column {
+        float: left;
+        padding: 10px;
+        }
+
+        /* Left and right column */
+        .column.side {
+        width: 25%;
+        }
+
+        /* Middle column */
+        .column.middle {
+        width: 50%;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+        .column.side, .column.middle {
+            width: 100%;
+        }
+        }
+
+        .recommendations {
+            margin: 40px 20px;
+            text-align: center;
+        }
+
+        .recommendations h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .recommendation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .recommendation-item {
+            background: snow;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .recommendation-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .recommendation-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .recommendation-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .recommendation-item .price {
+            font-size: 1.1rem;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #361500;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons i {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        footer .social-icons i:hover {
+            color: #ddd;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+    
+<body>
+    <header>
+    
+        <header>
+            <!-- Logotipo à esquerda -->
+            <div class="logo">
+                <a href="Menu.html"><img src="imagem/logotipo TunerStudio.png" alt="logotipo"></a>
+            </div>
+         
+            <!-- Toggle do menu para mobile, controlado pelo checkbox -->
+            <input type="checkbox" id="menu-mobile">
+            <label for="menu-mobile" class="menu-toggle">&#9776;</label>    
+         
+            <!-- Barra de pesquisa -->
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar...">
+                <button>Buscar</button>
+            </div>
+        </header>
+
+        <nav>
+            <ul class="menu">
+                
+                <!-- Área de itens extras: Favoritos, Carrinho e Login apenas com ícones -->
+                <li class="icon-only"><a href="Favoritos.html"><i class="fas fa-heart"></i></a></li>
+                <li class="icon-only"><a href="Carrinho.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li class="icon-only"><a href="Cadastro.html"><i class="fas fa-user"></i></a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    
+    <div class="topnav">
+        <a href="Todos.html">Todos</a>
+        <a href="Categorias.html">Categorias</a>
+        <a href="Ofertas.html">Ofertas</a>
+        <a href="Contato.html">Contato</a>
+        <li style="float:right"><a class="active" href="Endereço.html">Seu Endereço</a></li>
+      </div>
+
+      <section class="recommendations">
+       <h3>Tecla</h3>
+    <div class="recommendation-grid">
+      <div class="recommendation-item">
+        <a href="imagem/Instrumentos/Sopro1.jpg" target="_blank">
+            <img src="imagem/Instrumentos/Sopro1.jpg" alt="Amplificador VT120+">
+        </a>
+        <h4>Clarinete Tokai TCL- 200B Preto Brilho</h4>
+        <p class="price">R$1.970,00</p>
+        <button class="buy-button">Comprar</button>
+    </div>
+
+    <div class="recommendation-item">
+        <a href="imagem/Instrumentos/Sopro2.jpg" target="_blank">
+            <img src="imagem/Instrumentos/Sopro2.jpg" alt="Amplificador VT120+">
+        </a>
+        <h4>MSax Tokai TST 200PG</h4>
+        <p class="price">R$7.157,92</p>
+        <button class="buy-button">Comprar</button>
+    </div>
+
+    <div class="recommendation-item">
+        <a href="imagem/Instrumentos/Sopro3.jpg" target="_blank">
+            <img src="imagem/Instrumentos/Sopro3.jpg" alt="Amplificador VT120+">
+        </a>
+        <h4>Tuba Sinfônica 4/4 TOKAI TB 401L 4 Pistos Sib Bb Laqueada</h4>
+        <p class="price">R$8.624,00</p>
+        <button class="buy-button">Comprar</button>
+    </div>
+</div>
+</section>
+
+<footer>
+    <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+    </div>
+    <p>&copy; 2024 TunerStudio. Feito pela Dominus'Web</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+    

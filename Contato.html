@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Reset de margens e preenchimentos */
+        body {
+            font-family: Garamond, serif;
+            background-color: #5C3D2E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        /* Estilo do cabeçalho */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #361500;
+            padding: 3px 3px;
+            color: #fff;
+            position: relative;
+        }
+ 
+        /* Estilo do logotipo */
+        .logo img {
+            height: 50px; /* Tamanho do logotipo */
+        }
+ 
+        /* Estilo dos links do menu */
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+ 
+        .menu li {
+            margin: 0 20px;
+        }
+ 
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: left;
+        }
+
+ 
+        /* Ícones no menu (apenas para Favoritos, Carrinho e Login) */
+        .menu li.icon-only a {
+            font-size: 23px; /* Tamanho dos ícones */
+        }
+ 
+        /* Estilo da barra de pesquisa */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: 10%;
+            
+        }
+ 
+        .search-bar input[type="text"] {
+            padding: 3px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            width: 900px;
+        }
+ 
+        .search-bar button {
+            margin-left: 7px;
+            padding: 3px 3px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+ 
+        /* Toggle do menu para mobile */
+        .menu-toggle {
+            display: none; /* Esconde o ícone do menu em desktop */
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+ 
+        /* Esconde o checkbox que controla o menu mobile */
+        #menu-mobile {
+            display: none;
+        }
+ 
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            /* Ajuste para exibir o ícone do menu em mobile */
+            .menu-toggle {
+                display: block;
+            }
+ 
+            /* Esconde o menu padrão e barra de pesquisa em mobile */
+            .menu,
+            .search-bar {
+                display: none;
+            }
+ 
+            /* Exibe o menu em coluna ao ativar o menu mobile */
+            #menu-mobile:checked ~ nav .menu {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                padding: 10px 0;
+            }
+ 
+            .menu li {
+                margin: 10px 0;
+            }
+        }
+
+                .header {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+        }
+
+ /* Style the top navigation bar */
+        .topnav {
+        overflow: hidden;
+        background-color: #333;
+        }
+        
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: left;
+        padding: 10px 40px;
+        text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        /* Create three unequal columns that floats next to each other */
+        .column {
+        float: left;
+        padding: 10px;
+        }
+
+        /* Left and right column */
+        .column.side {
+        width: 25%;
+        }
+
+        /* Middle column */
+        .column.middle {
+        width: 50%;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+        .column.side, .column.middle {
+            width: 100%;
+        }
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 10px;
+            color: antiquewhite;
+        }
+        
+        p{
+            color: #f1f1f1;
+        }
+
+        h3{
+            color: #f1f1f1;
+        }
+
+        footer {
+            background-color: #361500;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons i {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        footer .social-icons i:hover {
+            color: #ddd;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+    
+<body>
+    <header>
+    
+        <header>
+            <!-- Logotipo à esquerda -->
+            <div class="logo">
+                <a href="Menu.html"><img src="imagem/logotipo TunerStudio.png" alt="logotipo"></a>
+            </div>
+         
+            <!-- Toggle do menu para mobile, controlado pelo checkbox -->
+            <input type="checkbox" id="menu-mobile">
+            <label for="menu-mobile" class="menu-toggle">&#9776;</label>    
+         
+            <!-- Barra de pesquisa -->
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar...">
+                <button>Buscar</button>
+            </div>
+        </header>
+
+        <nav>
+            <ul class="menu">
+                
+                <!-- Área de itens extras: Favoritos, Carrinho e Login apenas com ícones -->
+                <li class="icon-only"><a href="Favoritos.html"><i class="fas fa-heart"></i></a></li>
+                <li class="icon-only"><a href="Carrinho.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li class="icon-only"><a href="Cadastro.html"><i class="fas fa-user"></i></a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    
+    <div class="topnav">
+        <a href="Todos.html">Todos</a>
+        <a href="Categorias.html">Categorias</a>
+        <a href="Ofertas.html">Ofertas</a>
+        <a href="Contato.html">Contato</a>
+        <li style="float:right"><a class="active" href="Endereço.html">Seu Endereço</a></li>
+      </div>
+
+      <h1>Nossos Contatos</h1>
+       
+      </div>
+
+      <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>CENTRAL DE SUPORTE</h1>
+        <p>Bem-vindo a Central de atendimento, antes de entrar em contato conosco visite nossa página de perguntas frequentes ou​
+            entre em contato conosco em nossos canais de atendimento.</p> 
+            <p>Precisa de atendimento? Aqui você resolve de forma simples e rápida, procure um tópico abaixo.​</p>
+      </div>
+        
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Entrega de Produtos</h3>
+            <p>Atraso na entrega</p>
+            <p>Extravio/Sinistro</p>
+            <p>Avaria</p>
+            <p>Informações da Entrega no prazo</p>
+            <p>Alteração de endereço</p>
+
+          </div>
+          <div class="col-sm-4">
+            <h3>Informações Gerais</h3>
+            <p> Cópia da Nota Fiscal</p>
+            <p> Pagamento/Liberação</p>
+            <p>Alteração Cadastral</p> 
+          </div>
+          <div class="col-sm-4">
+            <h3>Trocas e Cancelamentos</h3>  
+            <p>Desistência da Compra</p>
+            <p>Troca</p>      
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+        <p>&copy; 2024 TunerStudio. Feito pela Dominus'Web</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+    
