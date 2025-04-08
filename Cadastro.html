@@ -36,17 +36,17 @@
         height: 50px; /* Tamanho do logotipo */
     }
 
-    /* Estilo dos links do menu */
-    .menu {
+    /* Estilo dos links do  */
+    . {
         display: flex;
         list-style: none;
     }
 
-    .menu li {
+    . li {
         margin: 0 20px;
     }
 
-    .menu li a {
+    . li a {
         color: #fff;
         text-decoration: none;
         font-weight: bold;
@@ -55,8 +55,8 @@
     }
 
 
-    /* Ícones no menu (apenas para Favoritos, Carrinho e Login) */
-    .menu li.icon-only a {
+    /* Ícones no  (apenas para Favoritos, Carrinho e Login) */
+    . li.icon-only a {
         font-size: 23px; /* Tamanho dos ícones */
     }
 
@@ -86,34 +86,34 @@
         border-radius: 5px;
     }
 
-    /* Toggle do menu para mobile */
-    .menu-toggle {
-        display: none; /* Esconde o ícone do menu em desktop */
+    /* Toggle do  para mobile */
+    .-toggle {
+        display: none; /* Esconde o ícone do  em desktop */
         font-size: 30px;
         color: #fff;
         cursor: pointer;
     }
 
-    /* Esconde o checkbox que controla o menu mobile */
-    #menu-mobile {
+    /* Esconde o checkbox que controla o  mobile */
+    #-mobile {
         display: none;
     }
 
     /* Responsividade para telas menores */
     @media (max-width: 768px) {
-        /* Ajuste para exibir o ícone do menu em mobile */
-        .menu-toggle {
+        /* Ajuste para exibir o ícone do  em mobile */
+        .-toggle {
             display: block;
         }
 
-        /* Esconde o menu padrão e barra de pesquisa em mobile */
-        .menu,
+        /* Esconde o  padrão e barra de pesquisa em mobile */
+        .,
         .search-bar {
             display: none;
         }
 
-        /* Exibe o menu em coluna ao ativar o menu mobile */
-        #menu-mobile:checked ~ nav .menu {
+        /* Exibe o  em coluna ao ativar o  mobile */
+        #-mobile:checked ~ nav . {
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -124,7 +124,7 @@
             padding: 10px 0;
         }
 
-        .menu li {
+        . li {
             margin: 10px 0;
         }
     }
@@ -370,12 +370,12 @@
         <header>
             <!-- Logotipo à esquerda -->
             <div class="logo">
-                <a href="Menu.html"><img src="imagem/logotipo TunerStudio.png" alt="logotipo"></a>
+                <a href="index.html"><img src="imagem/logotipo TunerStudio.png" alt="logotipo"></a>
             </div>
          
-            <!-- Toggle do menu para mobile, controlado pelo checkbox -->
-            <input type="checkbox" id="menu-mobile">
-            <label for="menu-mobile" class="menu-toggle">&#9776;</label>    
+            <!-- Toggle do  para mobile, controlado pelo checkbox -->
+            <input type="checkbox" id="-mobile">
+            <label for="-mobile" class="-toggle">&#9776;</label>    
          
             <!-- Barra de pesquisa -->
             <div class="search-bar">
@@ -385,7 +385,7 @@
         </header>
 
         <nav>
-            <ul class="menu">
+            <ul class="">
                 
                 <!-- Área de itens extras: Favoritos, Carrinho e Login apenas com ícones -->
                 <li class="icon-only"><a href="Favoritos.html"><i class="fas fa-heart"></i></a></li>
