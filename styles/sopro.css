@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio</title>
-    <!-- Link para Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Reset de margens e preenchimentos */
         body {
             font-family: Garamond, serif;
             background-color: #5C3D2E;
@@ -19,7 +8,7 @@
             padding: 0;
             box-sizing: border-box;
         }
- 
+
         /* Estilo do cabeçalho */
         header {
             display: flex;
@@ -30,23 +19,23 @@
             color: #fff;
             position: relative;
         }
- 
+
         /* Estilo do logotipo */
         .logo img {
             height: 50px; /* Tamanho do logotipo */
         }
- 
-        /* Estilo dos links do  */
-        . {
+
+        /* Estilo dos links do menu */
+        .menu {
             display: flex;
             list-style: none;
         }
- 
-        . li {
+
+        .menu li {
             margin: 0 20px;
         }
- 
-        . li a {
+
+        .menu li a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
@@ -54,12 +43,12 @@
             align-items: left;
         }
 
- 
-        /* Ícones no  (apenas para Favoritos, Carrinho e Login) */
-        . li.icon-only a {
+
+        /* Ícones no menu (apenas para Favoritos, Carrinho e Login) */
+        .menu li.icon-only a {
             font-size: 23px; /* Tamanho dos ícones */
         }
- 
+
         /* Estilo da barra de pesquisa */
         .search-bar {
             display: flex;
@@ -67,7 +56,7 @@
             margin-left: 10%;
             
         }
- 
+
         .search-bar input[type="text"] {
             padding: 3px;
             border-radius: 5px;
@@ -75,7 +64,7 @@
             outline: none;
             width: 900px;
         }
- 
+
         .search-bar button {
             margin-left: 7px;
             padding: 3px 3px;
@@ -85,35 +74,35 @@
             cursor: pointer;
             border-radius: 5px;
         }
- 
-        /* Toggle do  para mobile */
-        .-toggle {
-            display: none; /* Esconde o ícone do  em desktop */
+
+        /* Toggle do menu para mobile */
+        .menu-toggle {
+            display: none; /* Esconde o ícone do menu em desktop */
             font-size: 30px;
             color: #fff;
             cursor: pointer;
         }
- 
-        /* Esconde o checkbox que controla o  mobile */
-        #-mobile {
+
+        /* Esconde o checkbox que controla o menu mobile */
+        #menu-mobile {
             display: none;
         }
- 
+
         /* Responsividade para telas menores */
         @media (max-width: 768px) {
-            /* Ajuste para exibir o ícone do  em mobile */
-            .-toggle {
+            /* Ajuste para exibir o ícone do menu em mobile */
+            .menu-toggle {
                 display: block;
             }
- 
-            /* Esconde o  padrão e barra de pesquisa em mobile */
-            .,
+
+            /* Esconde o menu padrão e barra de pesquisa em mobile */
+            .menu,
             .search-bar {
                 display: none;
             }
- 
-            /* Exibe o  em coluna ao ativar o  mobile */
-            #-mobile:checked ~ nav . {
+
+            /* Exibe o menu em coluna ao ativar o menu mobile */
+            #menu-mobile:checked ~ nav .menu {
                 display: flex;
                 flex-direction: column;
                 position: absolute;
@@ -123,8 +112,8 @@
                 background-color: #333;
                 padding: 10px 0;
             }
-            
-            . li {
+
+            .menu li {
                 margin: 10px 0;
             }
         }
@@ -135,12 +124,12 @@
         text-align: center;
         }
 
- /* Style the top navigation bar */
+        /* Style the top navigation bar */
         .topnav {
         overflow: hidden;
         background-color: #333;
         }
-        
+
         .topnav a:hover {
         background-color: #ddd;
         color: black;
@@ -281,95 +270,4 @@
         footer p {
             font-size: 14px;
             margin-top: 10px;
-        }         
-    </style>
-</head>
-    
-<body>
-    <header>
-    
-        <header>
-            <!-- Logotipo à esquerda -->
-            <div class="logo">
-                <a href="index.html"><img src="imagem/logotipo TunerStudio.png" alt="logotipo"></a>
-            </div>
-         
-            <!-- Toggle do  para mobile, controlado pelo checkbox -->
-            <input type="checkbox" id="-mobile">
-            <label for="-mobile" class="-toggle">&#9776;</label>    
-         
-            <!-- Barra de pesquisa -->
-            <div class="search-bar">
-                <input type="text" placeholder="Pesquisar...">
-                <button>Buscar</button>
-            </div>
-        </header>
-
-        <nav>
-            <ul class="">
-                
-                <!-- Área de itens extras: Favoritos, Carrinho e Login apenas com ícones -->
-                <li class="icon-only"><a href="Favoritos.html"><i class="fas fa-heart"></i></a></li>
-                <li class="icon-only"><a href="Carrinho.html"><i class="fas fa-shopping-cart"></i></a></li>
-                <li class="icon-only"><a href="Cadastro.html"><i class="fas fa-user"></i></a></li>
-            </ul>
-        </nav>
-    
-    </header>
-    
-    <div class="topnav">
-        <a href="Todos.html">Todos</a>
-        <a href="Categorias.html">Categorias</a>
-        <a href="Ofertas.html">Ofertas</a>
-        <a href="Contato.html">Contato</a>
-        <li style="float:right"><a class="active" href="Endereço.html">Seu Endereço</a></li>
-      </div>
-
-      <section class="recommendations">
-        <h3>Audio</h3>
-     <div class="recommendation-grid">
-        <div class="recommendation-item">
-                <a href="imagem/Instrumentos/Audio1.jpg" target="_blank">
-                    <img src="imagem/Instrumentos/Audio1.jpg" alt="Amplificador VT120+">
-                </a>
-                <h4>Amplificador VT120+ 150Wrms</h4>
-                <p class="price">R$ 3.419,91</p>
-                <button class="buy-button">Comprar</button>
-            </div>
-            <!--Ate aqui .-->
-
-            <div class="recommendation-item">
-                <a href="imagem/Instrumentos/Audio2.jpg" target="_blank">
-                    <img src="imagem/Instrumentos/Audio2.jpg" alt="Amplificador VT120+">
-                </a>
-                <h4>Mesa Digital Yamaha DM3-S 16 Canais</h4>
-                <p class="price">R$16.019,91</p>
-                <button class="buy-button">Comprar</button>
-            </div>
-
-            <div class="recommendation-item">
-                <a href="imagem/Instrumentos/Audio3.jpg" target="_blank">
-                    <img src="imagem/Instrumentos/Audio3.jpg" alt="Amplificador VT120+">
-                </a>
-                <h4>Mesa de Som Digital Áurea MD12</h4>
-                <p class="price">R$7.199,91</p>
-                <button class="buy-button">Comprar</button>
-            </div>
- </div>
- </section>
- 
- <footer>
-     <div class="social-icons">
-         <i class="fab fa-facebook"></i>
-         <i class="fab fa-instagram"></i>
-         <i class="fab fa-twitter"></i>
-         <i class="fab fa-linkedin"></i>
-     </div>
-     <p>&copy; 2024 TunerStudio. Feito pela Dominus'Web</p>
- </footer>
- 
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-    
+        }

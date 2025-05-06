@@ -7,361 +7,7 @@
     <!-- Link para Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-
-    body {
-      font-family: Garamond, serif;
-        background-color: #5C3D2E;
-    }
-
-     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    /* Estilo do cabeçalho */
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #361500;
-        padding: 3px 3px;
-        color: #fff;
-        position: relative;
-    }
-
-    /* Estilo do logotipo */
-    .logo img {
-        height: 50px; /* Tamanho do logotipo */
-    }
-
-    /* Estilo dos links do  */
-    . {
-        display: flex;
-        list-style: none;
-    }
-
-    . li {
-        margin: 0 20px;
-    }
-
-    . li a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-    }
-
-
-    /* Ícones no  (apenas para Favoritos, Carrinho e Login) */
-    . li.icon-only a {
-        font-size: 23px; /* Tamanho dos ícones */
-    }
-
-    /* Estilo da barra de pesquisa */
-    .search-bar {
-        display: flex;
-        align-items: center;
-        margin-left: 10%;
-        
-    }
-
-    .search-bar input[type="text"] {
-        padding: 3px;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        width: 900px;
-    }
-
-    .search-bar button {
-        margin-left: 7px;
-        padding: 3px 3px;
-        border: none;
-        background-color: #555;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-
-    /* Toggle do  para mobile */
-    .-toggle {
-        display: none; /* Esconde o ícone do  em desktop */
-        font-size: 30px;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    /* Esconde o checkbox que controla o  mobile */
-    #-mobile {
-        display: none;
-    }
-
-    /* Responsividade para telas menores */
-    @media (max-width: 768px) {
-        /* Ajuste para exibir o ícone do  em mobile */
-        .-toggle {
-            display: block;
-        }
-
-        /* Esconde o  padrão e barra de pesquisa em mobile */
-        .,
-        .search-bar {
-            display: none;
-        }
-
-        /* Exibe o  em coluna ao ativar o  mobile */
-        #-mobile:checked ~ nav . {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-        . li {
-            margin: 10px 0;
-        }
-    }
-
-                .header {
-        background-color: #f1f1f1;
-        padding: 20px;
-        text-align: center;
-        }
-
- /* Style the top navigation bar */
-        .topnav {
-        overflow: hidden;
-        background-color: #333;
-        }
-        
-        .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-        }
-
-        /* Style the topnav links */
-        .topnav a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: left;
-        padding: 10px 40px;
-        text-decoration: none;
-        }
-
-        /* Change color on hover */
-        .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-        }
-
-        /* Create three unequal columns that floats next to each other */
-        .column {
-        float: left;
-        padding: 10px;
-        }
-
-        /* Left and right column */
-        .column.side {
-        width: 25%;
-        }
-
-        /* Middle column */
-        .column.middle {
-        width: 50%;
-        }
-
-        /* Clear floats after the columns */
-        .row::after {
-        content: "";
-        display: table;
-        clear: both;
-        }
-
-        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-        .column.side, .column.middle {
-            width: 100%;
-        }
-        }
-
-        .header {
-        background-color: #f1f1f1;
-        padding: 20px;
-        text-align: center;
-        }
-
- /* Style the top navigation bar */
-        .topnav {
-        overflow: hidden;
-        background-color: #333;
-        }
-        
-        .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-        }
-
-        /* Style the topnav links */
-        .topnav a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: left;
-        padding: 10px 40px;
-        text-decoration: none;
-        }
-
-        /* Change color on hover */
-        .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-        }
-
-        /* Create three unequal columns that floats next to each other */
-        .column {
-        float: left;
-        padding: 10px;
-        }
-
-        /* Left and right column */
-        .column.side {
-        width: 25%;
-        }
-
-        /* Middle column */
-        .column.middle {
-        width: 50%;
-        }
-
-        /* Clear floats after the columns */
-        .row::after {
-        content: "";
-        display: table;
-        clear: both;
-        }
-
-        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-        .column.side, .column.middle {
-            width: 100%;
-        }
-        }
-                
-        input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 10px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-      }
-
-        button2 {
-          background-color: #04AA6D;
-          color: white;
-          padding: 14px 20px;
-          margin: 8px 0;
-          border: none;
-          cursor: pointer;
-          width: 100%;
-        }
-
-        button2:hover {
-          opacity: 0.8;
-        }
-
-        .cancelbtn {
-          width: auto;
-          padding: 5px 18px;
-          background-color: #f44336;
-        }
-
-        .imgcontainer {
-          text-align: center;
-          margin: 24px 0 12px 0;
-        }
-
-        img.avatar {
-          width: 40%;
-          border-radius: 50%;
-        }
-
-        .container {
-          width: 30.99999%;
-          max-width: 1000px;
-          background-color: #fff;
-          float: center;
-          padding: 5 5px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        
-
-        span.psw {
-          float: right;
-          padding-top: 16px;
-        }
-
-        /* Change styles for span and cancel button on extra small screens */
-        @media screen and (max-width: 300px) {
-          span.psw {
-            display: block;
-            float: none;
-          }
-          .cancelbtn {
-            width: 100%;
-          }
-        }
-
-        .button {
-          background-color:#333;
-          border: none;
-          color: white;
-          padding: 5px 125px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 15px;
-          margin: 4px 2px;
-          cursor: pointer;
-        }
-
-        footer {
-            background-color: #361500;
-            color: #fff;
-            text-align: center;
-            padding: 20px 10px;
-        }
-
-        footer .social-icons {
-            margin: 10px 0;
-        }
-
-        footer .social-icons i {
-            margin: 0 10px;
-            font-size: 24px;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        footer .social-icons i:hover {
-            color: #ddd;
-        }
-
-        footer p {
-            font-size: 14px;
-            margin-top: 10px;
-        }
-            
-    </style>
+    <link rel="stylesheet" href="./styles/Cadastro.css"
 </head>
 <body>
 
@@ -372,11 +18,11 @@
             <div class="logo">
                 <a href="index.html"><img src="imagem/logotipo TunerStudio.png" alt="logotipo"></a>
             </div>
-         
+
             <!-- Toggle do  para mobile, controlado pelo checkbox -->
             <input type="checkbox" id="-mobile">
             <label for="-mobile" class="-toggle">&#9776;</label>    
-         
+
             <!-- Barra de pesquisa -->
             <div class="search-bar">
                 <input type="text" placeholder="Pesquisar...">
@@ -385,7 +31,7 @@
         </header>
 
         <nav>
-            <ul class="">
+            <ul class="icon">
                 
                 <!-- Área de itens extras: Favoritos, Carrinho e Login apenas com ícones -->
                 <li class="icon-only"><a href="Favoritos.html"><i class="fas fa-heart"></i></a></li>
@@ -396,60 +42,50 @@
     
     </header>
     
-    <div class="topnav">
-      <a href="Todos.html">Todos</a>
-      <a href="Categorias.html">Categorias</a>
-      <a href="Ofertas.html">Ofertas</a>
-      <a href="Contato.html">Contato</a>
-      <li style="float:right"><a class="active" href="Endereço.html">Seu Endereço</a></li>
-    </div>
+        <div class="topnav">
+            <a href="Todos.html">Todos</a>
+            <a href="Categorias.html">Categorias</a>
+            <a href="Ofertas.html">Ofertas</a>
+            <a href="Contato.html">Contato</a>
+        <li style="float:right"><a class="active" href="Endereço.html">Seu Endereço</a></li>
+        </div>
 
-     
-<br>
-      
-<form action="/action_page.php" method="post">
-
-  <div class="container"> 
-    <h2>Login</h2>
-    <label for="uname"><b>Nome de Usuario</b></label>
-    <input type="text" placeholder="Nome de Usuario" name="uname" required>
-
-    <label for="psw"><b>senha</b></label>
-    <input type="password" placeholder="Senha" name="psw" required>
-        
-    <button2 type="submit">Entrar</button2>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button2 type="button" class="cancelbtn">Cancel</button2>
-    <span class="psw"> <a href="#">Esqueci a Senha</a></span>
     <br>
-    <a href="Cadastro2.html" class="button">Não tenho cadastro</a>
+        
+    <form class="formulario-login" action="#" method="post">
 
-  </div>
-</form>
+    <h2>Cadastro</h2>
+
+        <input type="email" name="E-mail" placeholder="E-mail"/>
+        <input type="name" name="Nome" placeholder="Nome"/>
+        <input type="text" name="CPF" placeholder="CPF"/>
+        <input type="password" name="senha" placeholder="Senha"/>
+        <input type="tel" name="Telefone" placeholder="Telefone"/>
+        <input type="date" name="d-md-block" placeholder="d-md-block"/>
+        <input type="text" name="CEP" placeholder="CEP"/>
+        <input type="submit" value="Enviar" />
+        <a href="Cadastro2.html" title="Login">Login</a>
+
+    </form>
 
 
-<br>
+    <br>
 
-<footer>
-  <div class="social-icons">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-linkedin"></i>
-  </div>
-  <p>&copy; 2024 TunerStudio. Feito pela Dominus'Web</p>
-</footer>
+    <footer>
+    <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+    </div>
+    <p>&copy; 2024 TunerStudio. Feito pela Dominus'Web</p>
+    </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-</body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    </body>
+    </html>
 
 
